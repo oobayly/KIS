@@ -7,15 +7,15 @@ kill(all);
 
 /* [wxMaxima: input   start ] */
 /* The scaling factor for increasing grabbable mass for engineers in freefall */
-f[m]:1.5;
+f[m]:2;
 
 /* Exponential relationship */
-b[e]:.1;
+b[e]:.2;
 a[e]:1-b[e];
 c[e]:log((f[m] - a[e]) / b[e]) / 5;
 
 /* Logarithmic relationship */
-b[l]:.25;
+b[l]:.5;
 a[l]:1;
 c[l]:(exp((f[m] - a[l]) / b[l]) - 1) / 5;
 
@@ -36,10 +36,19 @@ f[f]:2;
 b:2;
 a:f[f]-b;
 c:-log((1-a)/b);
+f_s(x):=a + b * exp(-c *x);
 
 wxplot2d([
-a + b*exp(-c*x)
+f_s
 ], [x, 0, 2]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(f_s(1.7));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+100 * 1 * float(f_e(5));
 /* [wxMaxima: input   end   ] */
 
 /* Maxima can't load/batch files which end with a comment! */

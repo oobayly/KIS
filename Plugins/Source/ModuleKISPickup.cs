@@ -29,7 +29,7 @@ namespace KIS
         /// <remarks>The greater the value, the more linear the relationship.</remarks>
         /// </summary>
         [KSPField]
-        public float experienceExponent = 0.1;
+        public float experienceExponent = 0.2;
         /// <summary>
         /// The factor by which grabbable mass in increased when in freefall.
         /// </summary>
