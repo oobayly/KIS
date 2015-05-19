@@ -1,0 +1,46 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+kill(all);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+/* The scaling factor for increasing grabbable mass for engineers in freefall */
+f[m]:1.5;
+
+/* Exponential relationship */
+b[e]:.1;
+a[e]:1-b[e];
+c[e]:log((f[m] - a[e]) / b[e]) / 5;
+
+/* Logarithmic relationship */
+b[l]:.25;
+a[l]:1;
+c[l]:(exp((f[m] - a[l]) / b[l]) - 1) / 5;
+
+f_e(x):=a[e] + (b[e] * exp(c[e]*x));
+f_l(x):=a[l] + (b[l] * log(1 + (c[l] * x)));
+
+wxplot2d([
+1 + ((f[m] - 1) * x / 5),
+f_e(x),
+f_l(x)
+], [x, 0, 5]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+/* The scaling factor for increasing grabbable mass based on local gravity */
+f[f]:2;
+
+b:2;
+a:f[f]-b;
+c:-log((1-a)/b);
+
+wxplot2d([
+a + b*exp(-c*x)
+], [x, 0, 2]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
