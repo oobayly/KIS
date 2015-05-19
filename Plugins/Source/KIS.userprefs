@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ModuleKISInventory.cs">
+    <Files>
+      <File FileName="ModuleKISInventory.cs" Line="179" Column="25" />
+      <File FileName="KISAddonConfig.cs" Line="95" Column="14" />
+      <File FileName="ModuleKISPickup.cs" Line="91" Column="2" />
+      <File FileName="KISAddonPickup.cs" Line="465" Column="58" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
