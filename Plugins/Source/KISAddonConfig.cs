@@ -73,6 +73,10 @@ namespace KIS
             {
                 if (nodeEvaPickup.HasValue("grabKey")) KISAddonPickup.grabKey = nodeEvaPickup.GetValue("grabKey");
                 if (nodeEvaPickup.HasValue("canDetach")) evaPickup.canDetach = bool.Parse(nodeEvaPickup.GetValue("canDetach"));
+                if (nodeEvaPickup.HasValue("enableMassScaling")) evaPickup.enableMassScaling = bool.Parse(nodeEvaPickup.GetValue("enableMassScaling"));
+                if (nodeEvaPickup.HasValue("engineerMassFactor")) evaPickup.engineerMassFactor = float.Parse(nodeEvaPickup.GetValue("engineerMassFactor"));
+                if (nodeEvaPickup.HasValue("experienceExponent")) evaPickup.experienceExponent = float.Parse(nodeEvaPickup.GetValue("experienceExponent"));
+                if (nodeEvaPickup.HasValue("freeFallMassFactor")) evaPickup.freeFallMassFactor = float.Parse(nodeEvaPickup.GetValue("freeFallMassFactor"));
                 if (nodeEvaPickup.HasValue("maxDistance")) evaPickup.maxDistance = float.Parse(nodeEvaPickup.GetValue("maxDistance"));
                 if (nodeEvaPickup.HasValue("maxMass")) evaPickup.maxMass = float.Parse(nodeEvaPickup.GetValue("maxMass"));
                 if (nodeEvaPickup.HasValue("dropSndPath")) evaPickup.dropSndPath = nodeEvaPickup.GetValue("dropSndPath");
@@ -105,6 +109,10 @@ namespace KIS
             {
                 if (nodeEvaPickup.HasValue("grabKey")) KISAddonPickup.grabKey = nodeEvaPickup.GetValue("grabKey");
                 if (nodeEvaPickup.HasValue("canDetach")) evaFemalePickup.canDetach = bool.Parse(nodeEvaPickup.GetValue("canDetach"));
+                if (nodeEvaPickup.HasValue("enableMassScaling")) evaFemalePickup.enableMassScaling = bool.Parse(nodeEvaPickup.GetValue("enableMassScaling"));
+                if (nodeEvaPickup.HasValue("engineerMassFactor")) evaFemalePickup.engineerMassFactor = float.Parse(nodeEvaPickup.GetValue("engineerMassFactor"));
+                if (nodeEvaPickup.HasValue("experienceExponent")) evaFemalePickup.experienceExponent = float.Parse(nodeEvaPickup.GetValue("experienceExponent"));
+                if (nodeEvaPickup.HasValue("freeFallMassFactor")) evaFemalePickup.freeFallMassFactor = float.Parse(nodeEvaPickup.GetValue("freeFallMassFactor"));
                 if (nodeEvaPickup.HasValue("maxDistance")) evaFemalePickup.maxDistance = float.Parse(nodeEvaPickup.GetValue("maxDistance"));
                 if (nodeEvaPickup.HasValue("maxMass")) evaFemalePickup.maxMass = float.Parse(nodeEvaPickup.GetValue("maxMass"));
                 if (nodeEvaPickup.HasValue("dropSndPath")) evaFemalePickup.dropSndPath = nodeEvaPickup.GetValue("dropSndPath");

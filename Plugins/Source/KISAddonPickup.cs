@@ -462,7 +462,7 @@ namespace KIS
                 float partDist = Vector3.Distance(pickupModule.part.transform.position, p.transform.position);
                 if (partDist <= pickupModule.maxDistance)
                 {
-                    maxMass += pickupModule.maxMass;
+                    maxMass += pickupModule.ScaledMaxMass;
                 }
             }
             return maxMass;
